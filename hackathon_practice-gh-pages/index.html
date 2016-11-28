@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Practice Hackathon - Fullscreen Form</title>
+		<link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/index.css" media="screen" title="no title">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+		<script type="text/javascript" src="js/script.js"></script>
+
+	</head>
+	<body>
+		<div class="header">
+				<h1>Project Worksheet</h1>
+				<a class="glyphicon glyphicon-chevron-left icon" href="">
+						<span>Previous Demo</span>
+				</a>
+				<a class="glyphicon glyphicon-tint icon" href="">
+						<span>Back to The CodeDrops Article</span>
+				</a>
+				<a class="glyphicon glyphicon-question-sign icon" href="">
+						<span>This is a demo for a fullscreen form</span>
+				</a>
+		<!--number progress-->
+				<span class="progress-num">
+						<span id="current-num">1</span>
+						<span id="slide">/</span>
+						<span id="total-num">6</span>
+				</span>
+		</div>
+		<form id="proj_form" name="proj_form" method="post">
+
+				<div id="name-div" class="field-div">
+					<label for="name">What's your name?</label>
+					<input class="first-form-fill" type="text" id="name" placeholder="Dean Moriarty" autofocus required autocomplete="off">
+				</div>
+
+				<div id="email-div" class="field-div">
+					<label for="email">What's your email address?</label>
+					<input class="first-form-fill" type="email" id="email" placeholder="dean@road.us" required autocomplete="off">
+				</div>
+
+
+				<div id="site-div" class="field-div">
+					<label for="website">What's your priority for your new website?</label>
+					<input class="first-form-fill" type="radio" id="sell" name="website" value="sell" required autocomplete="off">
+					<label for="sell" id="sell-icon" class="radio-icons"></label>
+					<input class="first-form-fill" type="radio" id="fame" name="website" value="fame" autocomplete="off">
+					<label for="fame" id="fame-icon" class="radio-icons"></label>
+					<input class="first-form-fill" type="radio" id="mobile" name="website" value="mobile" autocomplete="off">
+					<label for="mobile" id="mobile-icon" class="radio-icons"></label>
+				</div>
+
+				<div id="palette-div" class="field-div">
+					<input class="first-form-fill" type="checkbox" id="color-check" value="colorCheck" required autocomplete="off">
+					<label for="color-check" id="color-container">Choose a color for your website.
+						<div class="preview preview-container">
+							<div class="preview preview-color"></div>
+								<span>Pick a color</span>
+						</div></label>
+				</div>
+
+				<div id="desc-div" class="field-div">
+						<label for="description">Describe how you imagine your website</label><br>
+						<textarea class="first-form-fill" id="desc" name="description" placeholder="Describe here"></textarea>
+				</div>
+
+				<div id="budget-div" class="field-div">
+						<label for="budget">What's your budget?</label><br>
+						<input class="first-form-fill" name="budget" id="budget" type="number" placeholder="1000" step="100" min="100" autocomplete="off">
+				</div>
+
+				<div class="fixed-cont-button">
+					<button type="button" id="continue">Continue</button>
+				</div>
+
+
+		</form>
+e
+		<div class="color-palette">
+			<ul id="color-options">
+				<li class="first-in-row first-row" id="hue-588c75"><span class="palette-desc">#588c75</span></li>
+				<li class="first-row" id="hue-b0c47f"><span class="palette-desc">#b0c47f</span></li>
+				<li class="first-row" id="hue-f3e395"><span class="palette-desc">#f3e395</span></li>
+				<li class="first-row" id="hue-f3ae73"><span class="palette-desc">#f3ae73</span></li>
+				<li class="first-row" id="hue-da645a"><span class="palette-desc">#da645a</span></li>
+				<li class="first-in-row second-row" id="hue-79a38f"><span class="palette-desc">#79a38f</span></li>
+				<li class="second-row" id="hue-c1d099"><span class="palette-desc">#c1d099</span></li>
+				<li class="second-row" id="hue-f5eaaa"><span class="palette-desc">#f5eaaa</span></li>
+				<li class="second-row" id="hue-f5be8f"><span class="palette-desc">#f5be8f</span></li>
+				<li class="second-row" id="hue-e1837b"><span class="palette-desc">#e1837b</span></li>
+				<li class="first-in-row third-row" id="hue-9bbaab"><span class="palette-desc">#9bbaab</span></li>
+				<li class="third-row" id="hue-d1dcb2"><span class="palette-desc">#d1dcb2</span></li>
+				<li class="third-row" id="hue-f9eec0"><span class="palette-desc">#f9eec0</span></li>
+				<li class="third-row" id="hue-f7cda9"><span class="palette-desc">#f7cda9</span></li>
+				<li class="third-row" id="hue-e8a19b"><span class="palette-desc">#e8a19b</span></li>
+				<li class="first-in-row last-row" id="hue-bdd1c8"><span class="palette-desc">#bdd1c8</span></li>
+				<li class="last-row" id="hue-e1e7cd"><span class="palette-desc">#e1e7cd</span></li>
+				<li class="last-row" id="hue-faf4d4"><span class="palette-desc">#faf4d4</span></li>
+				<li class="last-row" id="hue-fbdfc9"><span class="palette-desc">#fbdfc9</span></li>
+				<li class="last-row" id="hue-f1c1bd"><span class="palette-desc">#f1c1bd</span></li>
+			</ul>
+		</div>
+
+		<div class="form-final-container">
+			<form class="form-final" method="post">
+				<h2>Review and Submit</h2>
+				<div class="form-final-field-div">
+					<label for="form-final-name">What's your name?</label>
+					<input type="text" id="form-final-name" class="name" placeholder="Rick Sanchez" autofocus required autocomplete="off">
+				</div>
+
+				<div class="form-final-field-div">
+					<label for="form-final-email">What's your email address?</label>
+					<input type="email" id="form-final-email" class="email" placeholder="c137@galaxymail.com" required autocomplete="off">
+				</div>
+
+				<div class="form-final-field-div height-adj">
+					<label for="form-final-website">What's your priority for your new website?</label>
+					<input type="radio" id="form-final-sell" name="website" class="sell" value="sell" required autocomplete="off">
+					<label for="form-final-sell" id="sell-icon" class="radio-icons"></label>
+					<input type="radio" id="form-final-fame" name="website" class="fame" value="fame" autocomplete="off">
+					<label for="form-final-fame" id="fame-icon" class="radio-icons"></label>
+					<input type="radio" id="form-final-mobile" name="website" class="mobile" value="mobile" autocomplete="off">
+					<label for="form-final-mobile" id="mobile-icon" class="radio-icons"></label>
+				</div>
+
+				<div class="form-final-field-div height-adj">
+					<input type="checkbox" id="form-final-color-check" class="color-check" value="colorCheck" required autocomplete="off">
+					<label for="form-final-color-check" id="color-container">Choose a color for your website.
+						<div class="preview preview-container">
+							<div class="preview preview-color"></div>
+								<span>Pick a color</span>
+						</div></label>
+				</div>
+
+				<div class="form-final-field-div">
+						<label for="form-final-description">Describe how you imagine your website</label><br>
+						<textarea name="description" class="desc" placeholder="Describe here"></textarea>
+				</div>
+
+				<div class="form-final-field-div">
+						<label for="form-final-budget">What's your budget?</label><br>
+						<input name="budget" type="number" class="budget" placeholder="1000" step="100" min="100" autocomplete="off">
+				</div>
+
+				<button type="submit" name="button">Submit</button>
+			</form>
+		</div>
+
+	</body>
+</html>

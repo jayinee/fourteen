@@ -1,0 +1,416 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', Arial, sans-serif;
+}
+
+html, body, .color-palette {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #3b3f45;
+}
+
+form {
+  font-size: 4rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.hide-form {
+  display: none;
+}
+
+button {
+  font-size: 1.6rem;
+}
+/*Radio label and icon styling*/
+#sell-icon {
+  background: url("../images/conversion.svg") no-repeat center center;
+  margin-right: 1rem;
+}
+
+#sell-icon:hover {
+  opacity: 1;
+}
+
+#fame-icon {
+  background: url("../images/social.svg") no-repeat center center;
+  margin-right: 1rem;
+}
+
+#mobile-icon {
+  background: url("../images/mobile.svg") no-repeat center center;
+  opacity: .8;
+}
+
+label {
+  display: block;
+  color: #fff;
+  margin-right: 2rem;
+}
+
+label::before {
+  color: #232529;
+  display: inline-block;
+  font-size: 2rem;
+  margin-top: 20rem;
+  text-align: left;
+  width: 20rem;
+}
+
+label[for="sell"]::before {
+  content: "Sell things";
+}
+label[for="fame"]::before {
+  content: "Become famous";
+}
+label[for="mobile"]::before {
+  content: "Mobile market";
+}
+
+.radio-icons {
+  height: 18rem;
+  width: 15rem;
+  background-size:contain;
+  display:inline-block;
+}
+
+/*input styling*/
+input[type="radio"], input[type="checkbox"] {
+  left: -99.9rem;
+  position: absolute;
+}
+
+input, textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: .1rem solid black;
+  color: #fffed8;
+  font-size: 5.6rem;
+  font-weight: 900;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+}
+
+textarea {
+  border: .1rem solid black;
+}
+
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #35383e;
+}
+textarea::-moz-placeholder, input::-moz-placeholder { /* Firefox 19+ */
+  color: #35383e;
+}
+textarea:-ms-input-placeholder, input:-ms-input-placeholder { /* IE 10+ */
+  color: #35383e;
+}
+textarea:-moz-placeholder, input:-moz-placeholder { /* Firefox 18- */
+  color: #35383e;
+}
+
+.field-div {
+  /*background-color: blue;
+  border: 1px solid red;*/
+  height: 50rem;
+  margin: 8rem auto 0 auto;
+  width: 80%;
+  transition: all 1s;
+}
+
+.form-effect {
+  margin-top: -50rem;
+  opacity: 0;
+}
+
+.preview-container {
+  background-color: #292c30;
+  border-radius: .5rem;
+  height: 14rem;
+  padding: .3rem;
+  position: relative;
+  width: 15rem;
+}
+
+.preview-container span {
+  color: #fff;
+  font-size: 1.3rem;
+  left: 1rem;
+  position: absolute;
+  bottom: 1.1rem;
+}
+
+.preview-container span::after {
+  content: '\25BE';
+  margin-left: 4rem;
+}
+
+
+.preview-color {
+  background-color: #555b64;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+  height: 10rem;
+  width: 14.4rem;
+}
+
+/*Color palette*/
+
+div.color-palette {
+  background-color: #3b3f45;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  visibility: hidden;
+}
+
+
+div.show-palette {
+  visibility: visible;
+  opacity: 1;
+}
+
+div.color-palette #color-options li {
+  visibility: hidden;
+  opacity: 0;
+  transform: scaleY(.5);
+    -webkit-transform: scaleY(.5);
+}
+
+div.show-palette #color-options li.first-row {
+  transition: all .3s;
+}
+
+div.show-palette #color-options li.first-row {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+}
+
+div.show-palette #color-options li.second-row {
+  transition: all .5s;
+}
+
+div.show-palette #color-options li.second-row {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+}
+
+div.show-palette #color-options li.third-row {
+  transition: all .7s;
+}
+
+div.show-palette #color-options li.third-row {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+}
+
+div.show-palette #color-options li.last-row {
+  transition: all .9s;
+}
+
+div.show-palette #color-options li.last-row {
+  visibility: visible;
+  opacity: 1;
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+}
+
+
+/*let's start with the color palette in absolute positioning, then use a combination of css transition
+we need the display none, and the opacity at 0 first. Because we want to be able to click on the selector. If it's not display none, then the invisible element is in the way. Then the js will toggle the class which will display and have opacity back to 1.
+*/
+
+#color-options {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+#color-options li {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  box-shadow: inset 0rem -4rem 0rem 0rem #282b30;
+  display: inline-block;
+  height: 21%;
+  margin: 1rem 0 0 .5rem;
+
+  width: 18.5%;
+}
+
+#color-options .first-in-row {
+  margin: 2rem 0 0 2.5rem;
+}
+
+#color-options .palette-desc {
+  background-color: #282b30;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  padding-left: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  top: 13.4rem;
+}
+
+#hue-588c75 {background-color: #588c75;}
+#hue-b0c47f {background-color: #b0c47f;}
+#hue-f3e395 {background-color: #f3e395;}
+#hue-f3ae73 {background-color: #f3ae73;}
+#hue-da645a {background-color: #da645a;}
+#hue-79a38f {background-color: #79a38f;}
+#hue-c1d099 {background-color: #c1d099;}
+#hue-f5eaaa {background-color: #f5eaaa;}
+#hue-f5be8f {background-color: #f5be8f;}
+#hue-e1837b {background-color: #e1837b;}
+#hue-9bbaab {background-color: #9bbaab;}
+#hue-d1dcb2 {background-color: #d1dcb2;}
+#hue-f9eec0 {background-color: #f9eec0;}
+#hue-f7cda9 {background-color: #f7cda9;}
+#hue-e8a19b {background-color: #e8a19b;}
+#hue-bdd1c8 {background-color: #bdd1c8;}
+#hue-e1e7cd {background-color: #e1e7cd;}
+#hue-faf4d4 {background-color: #faf4d4;}
+#hue-fbdfc9 {background-color: #fbdfc9;}
+#hue-f1c1bd {background-color: #f1c1bd;}
+
+.header{
+  width: 100%;
+  background-color: #3b3f45;
+  padding: 3rem;
+}
+
+.header h1{
+  color: #fff;
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+
+.icon{
+  margin-top: 1rem;
+  color: #252525;
+}
+
+.icon:before{
+  margin: 0 1rem;
+  font-size: 2rem;
+}
+
+.icon span{
+  display: none;
+  position: absolute;
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding: 1rem 0 0 0.5rem;
+  white-space: nowrap;
+}
+
+.icon:hover, .icon:focus{
+  text-decoration: none;
+  color: #fff;
+}
+
+.icon:hover span{
+  display:block;
+  color: #6a7b7e;
+}
+
+.progress-num{
+  position: absolute;
+  right:5rem;
+  top: 11rem;
+  font-size: 4rem;
+  color: #252525;
+}
+
+#current-num, #total-num{
+  font-weight: 600;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #191919;
+}
+
+/*Final form*/
+
+.form-final {
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 50%;
+}
+
+.form-final-field-div {
+  height: 10rem;
+  margin: 5rem 0;
+}
+
+.height-adj {
+  height: 15rem;
+}
+
+.form-final h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.form-final label, .form-final input, .form-final textarea {
+  color: #35383e;
+  font-size: 1.6rem;
+}
+
+.form-final input, .form-final textarea {
+  color: #807f6c;
+  width: 100%;
+}
+
+.form-final-container {
+  background-color: #FFFED8;
+
+}
+
+#continue{
+  font-size: 2rem;
+  font-weight: bolder;
+  border: .3rem solid #232529;
+  background-color: #3b3f45;
+  color: #232529;
+  border-radius: 5rem;
+  padding: .8rem 1.8rem;
+}
+
+#continue:hover{
+  color: #fff;
+  background-color: #232529;
+}
+
+
+#dollar-sign {
+  background: url("../images/dollar.svg");
+  background-size: auto 75%;
+  background-position: left;
+  background-repeat: no-repeat;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+.fixed-cont-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;;
+}
